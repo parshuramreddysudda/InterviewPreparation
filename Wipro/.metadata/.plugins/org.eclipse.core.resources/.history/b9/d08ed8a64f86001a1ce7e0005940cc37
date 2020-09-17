@@ -1,0 +1,68 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.jdbc.ResultSetMetaData;
+
+/**
+ * 
+ */
+
+/**
+ * @author parsh
+ *
+ */
+public class Assignment2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws SQLException {
+		Connection conn = null;
+		
+		try {			
+			Class.forName("oracle.jdbc.driver.OracleDriver");  
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","hr"); 
+			  Statement stmt = con.createStatement();
+		      
+		      ResultSet rs = stmt.executeQuery("select * from departments");
+		      java.sql.ResultSetMetaData rsmd = rs.getMetaData();
+		         System.out.print("Field: " );
+		         System.out.print("; Null?: " );
+		         System.out.print("; Type: " );
+		      
+		      
+		      
+		      System.out.println("No. of columns : " + rsmd.getColumnCount());
+		      System.out.println("Column name of 1st column : " + rsmd.getTableName(1));
+		      System.out.println("Column type of 1st column : " + rsmd.getColumnTypeName(1));
+		      
+//		     
+//		      while(rs.next()){
+//		       
+//		         String Name  = rs.getString("Name");
+//		         String Null = rs.getString("Null?");
+//		         String Type = rs.getString("Type");     		 
+//		
+//		         System.out.print("Field: " + Name);
+//		         System.out.print("; Null?: " + Null);
+//		         System.out.print("; Type: " + Type);
+//		      
+//		      rs.close();
+//		}
+		}
+		catch (SQLException e) {
+			System.out.println(e);
+		} 
+		catch (Exception e) {
+			System.out.println(e);
+		} 
+		finally {
+			if (conn != null) conn.close();
+		}
+	
+
+	}
+}

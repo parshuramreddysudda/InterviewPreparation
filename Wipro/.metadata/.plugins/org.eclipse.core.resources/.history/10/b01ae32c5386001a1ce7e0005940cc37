@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package bean;
+
+/**
+ * @author parsh
+ *
+ */
+public class Stock {
+
+}

@@ -1,0 +1,93 @@
+/**
+ * 
+ */
+
+/**
+ * @author parsh
+ *
+ */
+public class Main
+{
+	public static void main(String[] args)
+	{
+		String Designation="",DA="";
+		String EmpNo = args[0];
+
+		String[][] Employee ={{"1001","1002","1003","1004","1005","1006","1007"},
+		{"Ashish","Sushma","Rahul","Chahat","Ranjan","Suman","Tanmay"},
+		{"01/04/2009","23/08/2012","12/11/2008","29/01/2013","16/07/2005","1/1/2000","12/06/2006"},
+		{"e","c","k","r","m","e","c"},
+		{"R&D","PM","Acct","Front Desk","Engg","Manufacturing","PM"},
+		{"20000","30000","10000","12000","50000","23000","29000"},
+		{"8000","12000","8000","6000","20000","9000","12000"},
+		{"3000","9000","1000","2000","20000","4400","10000"}};
+
+		String[][] Dearness={{"e","c","k","r","m"},
+							 {"Engineer","Consultant","Clerk","Receptionist","Manager"},
+							 {"20000","32000","12000","15000","40000"}};
+
+		int currentIndex = -1;
+		for (int i=0;i<Employee[0].length;i++) 
+		{
+    		if (Employee[0][i].equals(EmpNo)) 
+    		{
+        	currentIndex = i;
+    		}
+		}
+
+		if(currentIndex==-1)
+		{
+			System.out.print("There is no Employee with empid : "+EmpNo);
+		}
+
+		else
+		{
+			int codeIndex=0;
+
+			String ch=Employee[3][currentIndex];
+
+			for (int j=0;j<Dearness[0].length;j++) 
+			{
+    			if (Dearness[0][j].equals(ch)) 
+    			{
+        		codeIndex = j;
+    			}
+			}
+
+			switch(ch)
+			{
+				case "e":
+					Designation=Dearness[1][codeIndex];
+					DA=Dearness[2][codeIndex];
+					break;
+
+				case "c":
+					Designation=Dearness[1][codeIndex];
+					DA=Dearness[2][codeIndex];;
+					break;
+
+				case "k":
+					Designation=Dearness[1][codeIndex];
+					DA=Dearness[2][codeIndex];;
+					break;
+
+				case "r":
+					Designation=Dearness[1][codeIndex];
+					DA=Dearness[2][codeIndex];;
+					break;
+
+				case "m":
+					Designation=Dearness[1][codeIndex];
+					DA=Dearness[2][codeIndex];;
+					break;
+			}
+			
+			int Salary = Integer.parseInt(Employee[5][currentIndex]) + Integer.parseInt(Employee[6][currentIndex]) 
+																	 + Integer.parseInt(DA) 
+																	 - Integer.parseInt(Employee[7][currentIndex]);
+
+			System.out.format("%20s%20s%20s%20s%20s\n", "Emp No.", "Emp Name", "Department","Designation","Salary");
+			System.out.format("%20s%20s%20s%20s%20s", EmpNo, Employee[1][currentIndex], Employee[4][currentIndex],Designation,Salary);
+			}
+		}
+}

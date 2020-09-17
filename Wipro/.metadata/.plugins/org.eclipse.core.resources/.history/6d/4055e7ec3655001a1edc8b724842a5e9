@@ -1,0 +1,18 @@
+
+public class CaseChanger {
+ public static void main (String args[]) {
+	  
+	 
+	 char ch='e';
+	 
+	 if(ch >= 65 && ch <= 90)
+	 {
+		 System.out.print(Character.toLowerCase(ch));
+	 }
+	 else if(ch >= 97 && ch <= 122)
+	 {
+		 System.out.print(Character.toUpperCase(ch));
+	 }
+		 
+ }
+}

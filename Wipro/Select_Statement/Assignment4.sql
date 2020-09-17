@@ -1,0 +1,1 @@
+SELECT employee_id AS "Emp#" ,job_id as JOB, last_name AS Employee,hire_date AS HIRE_DATE FROM employees;  

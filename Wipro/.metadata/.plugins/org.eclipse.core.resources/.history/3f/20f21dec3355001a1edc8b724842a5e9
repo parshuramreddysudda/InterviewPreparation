@@ -1,0 +1,21 @@
+
+public class CheckInput { 
+	public static void main (String arg[]) {
+		int i=0;
+		if(arg.length>0)
+		{
+			while(arg.length==i)
+			{
+				System.out.println(arg[i]);
+				i++;
+			}
+		}
+		else {
+			System.out.println("No Values");  
+		}
+		
+       
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/parsh/Downloads/mysql-connector-java-5.1.38.jar"/>
+	<classpathentry kind="lib" path="C:/Users/parsh/OneDrive/Documents/GitHub/Interview_Preparation/Wipro/Oracle-11-Introduction/lib/ojdbc5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/parsh/OneDrive/Documents/GitHub/Interview_Preparation/Wipro/Oracle-11-Introduction/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/parsh/OneDrive/Documents/GitHub/Interview_Preparation/Wipro/Oracle-11-Introduction/lib/ons.jar"/>
+	<classpathentry kind="lib" path="C:/Users/parsh/OneDrive/Documents/GitHub/Interview_Preparation/Wipro/Oracle-11-Introduction/lib/orai18n.jar"/>
+	<classpathentry kind="lib" path="C:/Users/parsh/OneDrive/Documents/GitHub/Interview_Preparation/Wipro/Oracle-11-Introduction/lib/simplefan.jar"/>
+	<classpathentry kind="lib" path="C:/Users/parsh/OneDrive/Documents/GitHub/Interview_Preparation/Wipro/Oracle-11-Introduction/lib/ucp.jar"/>
+	<classpathentry kind="lib" path="C:/Users/parsh/OneDrive/Documents/GitHub/Interview_Preparation/Wipro/Oracle-11-Introduction/lib/xdb6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

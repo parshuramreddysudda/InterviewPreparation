@@ -1,0 +1,43 @@
+
+import java.util.*;
+ 
+public class Distance {
+    @SuppressWarnings("resource")
+	public static void main(String args[] ) throws Exception {
+       
+    	  Scanner sc=new Scanner(System.in);
+	        int point1=sc.nextInt();
+	        int point2=sc.nextInt();
+	        int point3=sc.nextInt();
+	        int point4=sc.nextInt();
+	        Point p=new Point(point4, point4, point4)
+ 
+}
+ 
+ 
+  public static void findDistance(Point p1, Point p2)
+         {
+	      
+     
+         } 
+   
+ 
+static class Point
+{
+	private static int point1;
+    private static int point2;
+    private static int point3;
+    private static int point4;
+    
+
+    public Point(int point1,int point2,int point3,int point4)
+    {
+        Account.id=id;
+        Account.balance=balance;
+        Account.interestRate=interestRate;
+
+    } 
+ 
+ 
+}
+}

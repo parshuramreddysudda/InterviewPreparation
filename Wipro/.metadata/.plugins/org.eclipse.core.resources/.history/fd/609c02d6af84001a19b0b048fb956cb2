@@ -1,0 +1,25 @@
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+ 
+public class Distance {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+ 
+}
+ 
+ 
+  public static double findDistance(Point p1, Point p2)
+         {
+     
+         } 
+   
+ 
+class Point
+{
+ 
+ 
+}

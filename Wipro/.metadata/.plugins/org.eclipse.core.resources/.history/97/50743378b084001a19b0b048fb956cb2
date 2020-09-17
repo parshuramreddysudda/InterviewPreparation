@@ -1,0 +1,30 @@
+
+import java.util.*;
+ 
+public class Distance {
+    @SuppressWarnings("resource")
+	public static void main(String args[] ) throws Exception {
+       
+    	  Scanner sc=new Scanner(System.in);
+	        int point1=sc.nextInt();
+	        int point2=sc.nextInt();
+	        int point3=sc.nextInt();
+	        int point4=sc.nextInt();
+		
+ 
+}
+ 
+ 
+  public static void findDistance(Point p1, Point p2)
+         {
+	      
+     
+         } 
+   
+ 
+class Point
+{
+ 
+ 
+}
+}

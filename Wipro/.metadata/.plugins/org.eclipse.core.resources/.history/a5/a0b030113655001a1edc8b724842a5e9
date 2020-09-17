@@ -1,0 +1,28 @@
+
+public class IntrestestCalcu {
+
+	public static void main(String[] args) {
+		
+		if(args[0]=="Male")
+		{
+			if(Integer.parseInt(args[1])<=58)
+			{
+				System.out.println("The percentage of interest is 8.4%.");
+			}
+			else {
+				System.out.println(" the percentage of interest is 10.5%.");
+			}
+		}
+		else {
+			if(Integer.parseInt(args[1])<=58)
+			{
+				System.out.println("The percentage of interest is 8.2%.");
+			}
+			else {
+				System.out.println(" the percentage of interest is 9.2%.");
+			}
+		}
+
+	}
+
+}

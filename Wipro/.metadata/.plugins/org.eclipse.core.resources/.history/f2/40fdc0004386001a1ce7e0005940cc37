@@ -1,0 +1,57 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+/**
+ * 
+ */
+
+/**
+ * @author parsh
+ *
+ */
+public class Assignment2 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws SQLException {
+		Connection conn = null;
+		
+		try {			
+			Class.forName("oracle.jdbc.driver.OracleDriver");  
+			Connection con= DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:" + "MyConnection", "hr","hr");
+			
+			System.out.println("Connection Established successfully");
+			  Statement stmt = con.createStatement();
+			  String sql = " DESCRIBE 'Departments'";
+		      ResultSet rs = stmt.executeQuery(sql);
+		      //STEP 5: Extract data from result set
+		      while(rs.next()){
+		         //Retrieve by column name
+		         String Name  = rs.getString("Name");
+		         String Null = rs.getString("Null?");
+		         String Type = rs.getString("Type");     		 
+		         //Display values
+		         System.out.print("Field: " + Name);
+		         System.out.print("; Null?: " + Null);
+		         System.out.print("; Type: " + Type);
+		      
+		      rs.close();
+		}
+		}
+		catch (SQLException e) {
+			System.out.println(e);
+		} 
+		catch (Exception e) {
+			System.out.println(e);
+		} 
+		finally {
+			if (conn != null) conn.close();
+		}
+	
+
+	}
+}

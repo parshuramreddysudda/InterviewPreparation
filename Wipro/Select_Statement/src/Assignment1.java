@@ -1,0 +1,41 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+/**
+ * 
+ */
+
+/**
+ * @author parsh
+ *
+ */
+public class Assignment1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws SQLException {
+		Connection conn = null;
+		
+		try {			
+			Class.forName("oracle.jdbc.driver.OracleDriver");  
+			DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","hr","hr"); 
+			System.out.print("Connection Sucessfully Established");
+		} 
+		catch (SQLException e) {
+			System.out.println(e);
+		} 
+		catch (Exception e) {
+			System.out.println(e);
+		} 
+		finally {
+			if (conn != null) conn.close();
+		}
+		
+	
+
+	}
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="GetPost">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent/WEB-INF/src"/>
+        <property name="context-root" value="GetPost"/>
+        <property name="java-output-path" value="/GetPost/build/classes"/>
+    </wb-module>
+</project-modules>
