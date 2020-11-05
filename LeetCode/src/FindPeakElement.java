@@ -20,7 +20,7 @@ public class FindPeakElement {
 			if(left==right){
 				return left;
 			}
-			else if(nums[mid]<nums[mid+1]) {
+			else if(nums[mid]>nums[mid+1]) {
 				right=mid;
 			}
 			else {

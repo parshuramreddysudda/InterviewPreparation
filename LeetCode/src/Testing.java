@@ -1,9 +1,9 @@
 
 public class Testing {
 
-	public static void main(String[] args) {
+	public static int main(String[] args) {
 		
-	return ((int)(Math.sqrt(8));
+	return ((int)(Math.sqrt(8)));
 
 	}
 

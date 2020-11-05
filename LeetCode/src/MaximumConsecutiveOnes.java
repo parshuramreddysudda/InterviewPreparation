@@ -16,7 +16,7 @@
 //Therefore only 12 and 7896 contain an even number of digits.
 
 
-class Solution {
+class Solution1 {
 	public int findMaxConsecutiveOnes(int[] nums) {
 		int result = 0, temp = 0;
 
