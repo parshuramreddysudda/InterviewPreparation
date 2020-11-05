@@ -1,25 +1,24 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 
-public class GroupsAnagrams {
+public class IsAnagram {
 
 	public static void main(String[] args) {
 
 //		Output: ["e","l","l"]
-		String[] st = { "ad","ac","aa" };
+		String st = "atc";
 //		System.out.println(Character.getNumericValue('a'));
-		System.out.println(commonChars(st));
+		System.out.println(getHashcode(st));
 //		List<String> list = commonChars(st);
 //		Stream.of(list.toString()).forEach(System.out::println);
 
 	}
 
-	private static HashMap<Integer, ArrayList<String>> commonChars(String[] st) {
+	private static int getHashcode(String str) {
 
-		HashMap<Integer, ArrayList<String>> hashmap = new HashMap<Integer, ArrayList<String>>();
-		ArrayList<String> arraylist = new ArrayList<String>();
 		int[] numbers = new int[26];
 
-		for (String str:st) {
 			int temp = 0;
 			Arrays.fill(numbers, 0);
 			int sum = 0;
@@ -35,16 +34,9 @@ public class GroupsAnagrams {
 				temp--;
 			}
 
-			int key = sb.toString().hashCode();
-			if (!hashmap.containsKey(key)) {
-				hashmap.put(key, new ArrayList<String>());
-				hashmap.get(key).add(str);
-
-			} else {
-				hashmap.get(key).add(str);
-			}
-		}
-		return hashmap;
+			int key = sb.toString().hashCode();	
+				
+		return key;
 
 	}
 
