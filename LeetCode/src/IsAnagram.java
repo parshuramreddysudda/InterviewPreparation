@@ -8,13 +8,31 @@ public class IsAnagram {
 
 //		Output: ["e","l","l"]
 		String st = "atc";
+		String t="cat";
+		if(st.length()!=t.length()) {
+			
+		}
+
+		if(sortString(st).equals(sortString(t))) {
+//			return true;
+		}
 //		System.out.println(Character.getNumericValue('a'));
 		System.out.println(getHashcode(st));
 //		List<String> list = commonChars(st);
 //		Stream.of(list.toString()).forEach(System.out::println);
 
 	}
-
+	 public static String sortString(String inputString) 
+	    { 
+	        // convert input string to char array 
+	        char tempArray[] = inputString.toCharArray(); 
+	          
+	        // sort tempArray 
+	        Arrays.sort(tempArray); 
+	          
+	        // return new sorted string 
+	        return new String(tempArray); 
+	    } 
 	private static int getHashcode(String str) {
 
 		int[] numbers = new int[26];
