@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 
 public class TopKFrequentElements {
@@ -20,21 +21,7 @@ public class TopKFrequentElements {
 			hash.put(n, repeat + 1);
 		}
 		int i = 0;
-		int[] arr = new int[hash.size()];
-		PriorityQueue<Integer> pq = new PriorityQueue<Integer>(Collections.reverseOrder());
-		for (Integer name : hash.keySet()) {
-			pq.add(hash.get(name));
-//			System.out.println("Inserted key is " + name + " Value is " + hash.get(name));
-		}
-		while(k>0) {
-			for (Integer name : hash.keySet()) {
-				if(pq.peek()==hash.get(name)) {
-					k--;
-				System.out.println("Inserted key is " + name + " Value is " + hash.get(name));
-				}
-			}
-			pq.poll();
-		}
+		PriorityQueue<Map.Entry<Integer, Integer>> queue=new PriorityQueue()
 		
 		
 //		collection.splice()
