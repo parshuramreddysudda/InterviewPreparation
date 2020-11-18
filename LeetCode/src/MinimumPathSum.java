@@ -27,20 +27,6 @@ public class MinimumPathSum {
 				dp[i][j]=Math.min(dp[i+1][j], dp[i][j+1])+grid[i][j];
 			}
 		}
-
-		for (int i = 0; i < rows; i++) {
-			for (int j = 0; j < cols; j++) {
-				System.out.print(" " + dp[i][j]);
-			}
-			System.out.println();
-		}
-		System.out.println("Grid Output");
-		for (int i = 0; i < grid.length; i++) {
-			for (int j = 0; j < grid[0].length; j++) {
-				System.out.print(" " + grid[i][j]);
-			}
-			System.out.println();
-		}
 	}
 
 }

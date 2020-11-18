@@ -27,9 +27,6 @@ public class KClosestElemnets {
 			for(int i=left;i<right&&i<arr.length;i++)
 				list.add(arr[i]);
 			System.out.println(list);
-		
-		
-	
 	}
 
 	private static int binarySearch(int[] nums, int target) {
