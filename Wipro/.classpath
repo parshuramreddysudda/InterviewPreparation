@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="Abstract Classes/src"/>
+	<classpathentry kind="src" path="Abstraction/src"/>
+	<classpathentry kind="src" path="ArrayList/src"/>
+	<classpathentry kind="src" path="Arrays/src"/>
+	<classpathentry kind="src" path="Assert methods and annotations/src"/>
+	<classpathentry kind="src" path="CollectandGroupCards/src"/>
+	<classpathentry kind="src" path="CollectUniqueSymbolsFromSetofCards/src"/>
+	<classpathentry kind="src" path="CommandLineAurguments/src"/>
+	<classpathentry kind="src" path="CookieManagement/src"/>
+	<classpathentry kind="src" path="EmployeManagementSystem/src"/>
+	<classpathentry kind="src" path="EmployeRegisterInputDisplay/src"/>
+	<classpathentry kind="src" path="EstablishingConnectionJDBC/src"/>
+	<classpathentry kind="src" path="Exception Handling/src"/>
+	<classpathentry kind="src" path="ExecutingandProcessingResults/src"/>
+	<classpathentry kind="src" path="ForEach/src"/>
+	<classpathentry kind="src" path="Functional_interface/src"/>
+	<classpathentry kind="src" path="Fundamentals/src"/>
+	<classpathentry kind="src" path="I-O Operations/src"/>
+	<classpathentry kind="src" path="IfElse/src"/>
+	<classpathentry kind="src" path="Inheritance/src"/>
+	<classpathentry kind="src" path="Interfaces/Assignment1"/>
+	<classpathentry kind="src" path="Interfaces/Assignment2"/>
+	<classpathentry kind="src" path="Interfaces/src"/>
+	<classpathentry kind="src" path="IntrestCalculator/src"/>
+	<classpathentry kind="src" path="Intro/src"/>
+	<classpathentry kind="src" path="InventorySalesSystem/src"/>
+	<classpathentry kind="src" path="Java8Interfaces/src"/>
+	<classpathentry kind="src" path="JavaBeans/src"/>
+	<classpathentry kind="src" path="Jsp/src"/>
+	<classpathentry kind="src" path="Junit/src"/>
+	<classpathentry kind="src" path="LamdaExpressions"/>
+	<classpathentry kind="src" path="List/src"/>
+	<classpathentry kind="src" path="Maps/src"/>
+	<classpathentry kind="src" path="MethodReference/src"/>
+	<classpathentry kind="src" path="OOPS/src"/>
+	<classpathentry kind="src" path="OptionalClass/src"/>
+	<classpathentry kind="src" path="Oracle-11-Introduction/src"/>
+	<classpathentry kind="src" path="Overiding/src"/>
+	<classpathentry kind="src" path="Packages/src"/>
+	<classpathentry kind="src" path="PostRequest/src"/>
+	<classpathentry kind="src" path="PreparedStatements-MetadatObjects/src"/>
+	<classpathentry kind="src" path="Project/src"/>
+	<classpathentry kind="src" path="Select_Statement/src"/>
+	<classpathentry kind="src" path="Serialization/src"/>
+	<classpathentry kind="src" path="ServletConfig/src"/>
+	<classpathentry kind="src" path="SetofBoxes/src"/>
+	<classpathentry kind="src" path="Sets/src"/>
+	<classpathentry kind="src" path="SQLTEMP/src"/>
+	<classpathentry kind="src" path="StreamApi/src"/>
+	<classpathentry kind="src" path="String_Operation/src"/>
+	<classpathentry kind="src" path="String,StringBuffer/src"/>
+	<classpathentry kind="src" path="StringOperationWithArrayList/src"/>
+	<classpathentry kind="src" path="Test Suite/src"/>
+	<classpathentry kind="src" path="UsingCallableStatementandTransactions/src"/>
+	<classpathentry kind="src" path="VideoRentalSystem/src"/>
+	<classpathentry kind="src" path="Wrapper/src"/>
+	<classpathentry kind="lib" path="Oracle-11-Introduction/lib/ojdbc5.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Oracle-11-Introduction/lib/ojdbc6.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Oracle-11-Introduction/lib/ons.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Oracle-11-Introduction/lib/orai18n.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Oracle-11-Introduction/lib/simplefan.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Oracle-11-Introduction/lib/ucp.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Oracle-11-Introduction/lib/xdb6.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="Abstract Classes/bin"/>
+</classpath>
