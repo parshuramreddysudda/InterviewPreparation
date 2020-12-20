@@ -9,9 +9,9 @@ public class KnapsackZeroOne {
 	public static void main(String[] args) {
 
 		int n = 3;
-		int W = 6;
-		int val[] = { 1,6,10,16};
-		int wt[] = { 1,2,3,5 };
+		int W = 200;
+		int val[] = { 51,52,100};
+		int wt[] = {27,0,3 };
 		int[][] dp = new int[val.length][W + 1];
 
 

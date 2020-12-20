@@ -16,7 +16,7 @@ public class SubSetSum {
 		System.out.print(subsetDPWithOneArrayBoolean(arr));
 
 		for (int i = 0; i < dp1.length; i++) {
-			System.out.println(dp2[i]);
+//			System.out.println(dp2[i]);
 		}
 
 	}
@@ -28,12 +28,12 @@ public class SubSetSum {
 		}
 		boolean[] dp = new boolean[sum + 1];
 
-		for (int i = 1; i < dp.length; i++)
+		for (int i = 0; i < dp.length; i++)
 			dp[i] = (i <= arr[0] ? true : false);
 
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = 1; i < arr.length; i++) {
 			for (int s = sum; s >= 0; s--) {
-				System.out.println("I value is "+i);
+//				System.out.println("I value is "+i);
 				if (s >= arr[i])
 					dp[s] = dp[s - arr[i]];
 			}
