@@ -11,7 +11,7 @@ public class PascalsTriangle {
 		List<Integer> list1 = new ArrayList<Integer>();
 		list1.add(1);
 		mainList.add(list1);
-		int numRows = 5;
+		int numRows = 33;
 		int count = 0;
 		while (numRows > 0) {
 			List<Integer> list = new ArrayList<Integer>();
