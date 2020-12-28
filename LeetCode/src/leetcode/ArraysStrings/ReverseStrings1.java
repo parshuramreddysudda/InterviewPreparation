@@ -1,5 +1,7 @@
 package leetcode.ArraysStrings;
 
+import java.util.*;
+
 public class ReverseStrings1 {
 
 	public static void main(String[] args) {
@@ -19,7 +21,7 @@ public class ReverseStrings1 {
 		}
 
 		System.out.println(result);
-
+		List<List<Integer>> mainList=new ArrayList<List<Integer>>();
 	}
 
 }
