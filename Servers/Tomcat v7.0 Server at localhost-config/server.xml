@@ -17,7 +17,7 @@
 --><!-- Note:  A "Server" is not itself a "Container", so you may not
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
- --><Server port="8007" shutdown="SHUTDOWN">
+ --><Server port="8012" shutdown="SHUTDOWN">
   <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
@@ -62,7 +62,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL HTTP/1.1 Connector on port 8080
     -->
-    <Connector connectionTimeout="20000" port="8089" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" port="8090" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -130,7 +130,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="FirstServletWeb" path="/FirstServletWeb" reloadable="true" source="org.eclipse.jst.jee.server:FirstServletWeb"/><Context docBase="ServletChaining" path="/ServletChaining" reloadable="true" source="org.eclipse.jst.jee.server:ServletChaining"/><Context docBase="CookieManagement" path="/CookieManagement" reloadable="true" source="org.eclipse.jst.jee.server:CookieManagement"/></Host>
+      <Context docBase="FirstServletWeb" path="/FirstServletWeb" reloadable="true" source="org.eclipse.jst.jee.server:FirstServletWeb"/><Context docBase="ServletChaining" path="/ServletChaining" reloadable="true" source="org.eclipse.jst.jee.server:ServletChaining"/><Context docBase="CookieManagement" path="/CookieManagement" reloadable="true" source="org.eclipse.jst.jee.server:CookieManagement"/><Context docBase="JSPLogin" path="/JSPLogin" reloadable="true" source="org.eclipse.jst.jee.server:JSPLogin"/><Context docBase="CandidateProject" path="/CandidateProject" reloadable="true" source="org.eclipse.jst.jee.server:CandidateProject"/></Host>
     </Engine>
   </Service>
 </Server>

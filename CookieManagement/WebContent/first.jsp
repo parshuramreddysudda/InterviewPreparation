@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
 	<h1>Hello World</h1>
 	<%!int count = 10;%>
 	<%
@@ -19,10 +21,11 @@
 		for (int i = 1; i < 7; i++) {
 	%>
 
-	<h <%=i%>>Wipro</h<%=i%>>
+	<h<%=i%>>Wipro</h<%=i%>>
 	<br>
 	<%
 		}
 	%>
+	<jsp:include page="second.jsp" />
 </body>
 </html>

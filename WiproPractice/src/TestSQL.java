@@ -17,7 +17,7 @@ public class TestSQL {
 			Connection con = DriverManager.getConnection(url,uname,pwd);
 			System.out.println("Connected : "+con);
 			Statement st =  con.createStatement();
-			String qry="select * from countries";
+			String qry="select * from userlogin";
 			ResultSet rs = st.executeQuery(qry);
 			while(rs.next()) {
 				System.out.println("Deptno : "+rs.getString("COUNTRY_ID"));
