@@ -12,9 +12,11 @@ public class DriveObjectCreation {
 //		Creating an object for Chrome Browser
 		System.setProperty("webdriver.chrome.driver", "F://Selenium/chromedriver2.exe");
 		WebDriver driver=new ChromeDriver();
-		driver.get("http://www.fb.com");
-		System.out.print(driver.getTitle());
-		driver.findElement(By.id("email")).sendKeys("192.168.0.a");
+		driver.get("https://getbootstrap.com/");
+//		System.out.print(driver.getTitle());
+//		driver.findElement(By.id("email")).sendKeys("192.168.0.a");
+		//X path DEfination 
+		driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/div[2]/div/a[1]")).click();;
 		
 //		driver.close() ;
 	}
