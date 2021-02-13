@@ -51,6 +51,8 @@
 	int[] arr={45,456,235466,457,567,567};
 	request.setAttribute("arr", arr);
 	%>
+	<c:forTokens items="Wipro,CTS,TCS,Infotech" delims="," var="ele">
+	<c:out value="${ele}"></c:out><br/></c:forTokens>
 	
 	<c:forEach var="i" items="${arr}">
 	<c:out value="${i}"/>

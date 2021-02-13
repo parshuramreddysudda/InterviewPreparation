@@ -13,5 +13,6 @@
 	<classpathentry kind="lib" path="F:/Selenium/Drivers/libs/guava-25.0-jre.jar"/>
 	<classpathentry kind="lib" path="F:/Selenium/Drivers/libs/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="F:/Selenium/Drivers/libs/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="H:/OJDBC FIles/testng-7.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
