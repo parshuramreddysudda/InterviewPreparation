@@ -42,11 +42,11 @@ public class Login extends HttpServlet {
 		DBConnection con = new DBConnection();
 		try {
 			Statement st = DBConnection.getDBConnection().createStatement();
-			String sql = "select * from userlogin where name='" + user + "' and pass='" + pass + "' ";
+			String sql = "select type from userlogin where name='" + user + "' and pass='" + pass + "' ";
 			ResultSet rs = st.executeQuery(sql);
 
 			if (rs.next()) {
-				if (user.equalsIgnoreCase(user)) {
+				if (rs.getString("type").equalsIgnoreCase("A")) {
 					response.sendRedirect("Admin.html");
 
 				}else {

@@ -44,12 +44,12 @@ public class Login extends HttpServlet {
 		DBConnection con = new DBConnection();
 		try {
 			Statement st = DBConnection.getDBConnection().createStatement();
-			String sql = "select * from userlogin where name='" + user + "' and pass='" + pass + "' ";
+			String sql = "select type from userlogin where name='" + user + "' and pass='" + pass + "' ";
 			ResultSet rs = st.executeQuery(sql);
 			HttpSession ses = request.getSession();
 			System.out.println("Username is "+user);
 			if (rs.next()) {
-				if (user.equalsIgnoreCase("admin")) {
+				if (rs.getString("type").equalsIgnoreCase("A")) {
 					ses.setAttribute("name", user);
 					request.getRequestDispatcher("Display.jsp").forward(request, response);
 				} else {
