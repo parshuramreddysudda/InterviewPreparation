@@ -44,7 +44,7 @@ public class Login extends HttpServlet {
 			Statement st = DBConnection.getDBConnection().createStatement();
 			String sql = "select type from userlogin where name='" + user + "' and pass='" + pass + "' ";
 			ResultSet rs = st.executeQuery(sql);
-
+//			request.getServletContext();
 			if (rs.next()) {
 				if (rs.getString("type").equalsIgnoreCase("A")) {
 					response.sendRedirect("Admin.html");
