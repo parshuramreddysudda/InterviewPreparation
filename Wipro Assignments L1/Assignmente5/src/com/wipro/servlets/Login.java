@@ -35,32 +35,35 @@ public class Login extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		PrintWriter out = response.getWriter();
 		out.print(getServletContext().getInitParameter("AdministratorEmail"));
-//		String user = request.getParameter("user");
-//		String pass = request.getParameter("pass");
-//		DBConnection con = new DBConnection();
-//		try {
-//			Statement st = DBConnection.getDBConnection().createStatement();
-//			String sql = "select type from userlogin where name='" + user + "' and pass='" + pass + "' ";
-//			ResultSet rs = st.executeQuery(sql);
-////			request.getServletContext();
-//			if (rs.next()) {
-//				if (rs.getString("type").equalsIgnoreCase("A")) {
-//					response.sendRedirect("Admin.html");
-//
-//				}else {
-//					response.sendRedirect("User.html");
-//
-//				}
-//			} else {
-//				response.sendRedirect("Error.html");
-//			}
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		String ClassName=getServletContext().getInitParameter("ClassName");
+		String Url=getServletContext().getInitParameter("Url");
+		String Username=getServletContext().getInitParameter("Username");
+		String Password=getServletContext().getInitParameter("Password");
+		String user = request.getParameter("username");
+		String pass = request.getParameter("password");
+		DBConnection con = new DBConnection();
+		try {
+			Statement st = DBConnection.getDBConnection(ClassName, Url, Username, Password).createStatement();
+			String sql = "select type from userlogin where name='" + user + "' and pass='" + pass + "' ";
+			ResultSet rs = st.executeQuery(sql);
+			if (rs.next()) {
+				if (rs.getString("type").equalsIgnoreCase("A")) {
+					response.sendRedirect("Admin.html");
+
+				}else {
+					response.sendRedirect("User.html");
+
+				}
+			} else {
+				response.sendRedirect("Error.html");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
