@@ -1,11 +1,14 @@
 package automatingFeilds;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+import org.openqa.selenium.interactions.Actions;
+
 
 public class DropdownAutomation {
 
@@ -17,14 +20,19 @@ public class DropdownAutomation {
 
 		System.setProperty("webdriver.chrome.driver", "F://Selenium/chromedriver2.exe");
 		WebDriver driver=new ChromeDriver();
-		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
-		driver.findElement(By.xpath("//*[@id=\"name\"]")).sendKeys("Hacker");
-		driver.findElement(By.xpath("//*[@id=\"alertbtn\"]")).click();
-		driver.switchTo().alert().accept();
-		driver.findElement(By.xpath("//*[@id=\"name\"]")).sendKeys("Hacker");
-		driver.findElement(By.xpath("//*[@id=\"confirmbtn\"]")).click();
-		driver.switchTo().alert().dismiss();
-		driver.close();
+		driver.manage().window().maximize();
+		driver.get("https://rahulshettyacademy.com/loginpagePractise/");
+		driver.findElement(By.cssSelector(".blinkingText")).click();
+		Set<String> window=driver.getWindowHandles();
+		Iterator<String>  it=window.iterator();
+		String parent=it.next();
+		String child=it.next();
+		driver.switchTo().window(child);
+		System.out.println(driver.findElement(By.xpath("//*[@id=\"interview-material-container\"]/div/div[2]/p[2]/strong/a")).getText());
+		driver.findElement(By.xpath("//*[@id=\"interview-material-container\"]/div/div[2]/p[2]/strong/a")).getText();
+		
+//		Actions act=new Actions(driver);
+//		act.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello world").contextClick().build().perform();
 
 	}
 
