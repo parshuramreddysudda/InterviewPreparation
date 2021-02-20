@@ -30,7 +30,7 @@ public class DropdownAutomation {
 		driver.switchTo().window(child);
 		System.out.println(driver.findElement(By.xpath("//*[@id=\"interview-material-container\"]/div/div[2]/p[2]/strong/a")).getText());
 		driver.findElement(By.xpath("//*[@id=\"interview-material-container\"]/div/div[2]/p[2]/strong/a")).getText();
-		
+		driver.close();
 //		Actions act=new Actions(driver);
 //		act.moveToElement(driver.findElement(By.id("twotabsearchtextbox"))).click().keyDown(Keys.SHIFT).sendKeys("hello world").contextClick().build().perform();
 
