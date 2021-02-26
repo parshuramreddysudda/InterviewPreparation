@@ -9,7 +9,8 @@ public class CheckBalance {
 		String s="ganga";
 		int count=s.length();
 		while(count>0) {
-			z
+			Object z;
+ 
 		}
 		
 	}

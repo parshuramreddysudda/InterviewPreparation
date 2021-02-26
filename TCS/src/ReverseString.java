@@ -9,7 +9,7 @@ public class ReverseString {
 	public static void main(String[] args) {
 		
 		Scanner sc=new  Scanner(System.in);
-		System.out.println(findEven(986));
+		System.out.println();
 	}
 
 	private static void findEven(int i) {

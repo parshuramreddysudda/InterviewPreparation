@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Encryption {
 
-	public asdEncryption1() {
+	public void asdEncryption1() {
 		// TODO Auto-generated constructor stub
 	}
-	public void asdEncryption1() {
+	public void asdEncryption11() {
 		// TODO Auto-generated constructor stub
 	}
 
