@@ -11,18 +11,12 @@ public class JSExecution {
 	}
 
 	public static void main(String[] args) {
-
-
 		System.setProperty("webdriver.chrome.driver", "F://Selenium/chromedriver2.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://reactjs.org/");
 		driver.manage().window().maximize();
-		
 		JavascriptExecutor js=(JavascriptExecutor) driver;
-		
 		js.executeScript("window.scrollBy(0,4566)");
-		
-
 	}
 
 }

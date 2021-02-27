@@ -42,7 +42,7 @@ public class Student {
         this.noteBooks = noteBooks;
     }
 
-    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities) {
+    public Student(String name, int gradeLevel, double gpa, String gender, int i, List<String> activities, Student student) {
         this.name = name;
         this.gradeLevel = gradeLevel;
         this.gpa = gpa;
