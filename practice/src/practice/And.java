@@ -15,7 +15,6 @@ public class And {
 		int decimal2 = Integer.parseInt(binar2, 2);
 
 		int a = 13; /* 60 = 0011 1100 */
-
 		int b = 7; /* 13 = 0000 1101 */
 		int d = 3;
 		int c = 3;
