@@ -8,7 +8,7 @@ public class MaxDigitUsingFive {
 
 	public static void main(String[] args) {
 
-		System.out.println("maxNumberis  " + maxNumberis(6856635));
+		System.out.println("maxNumberis  " + maxNumberis(-8000));
 	}
 
 	public static int maxNumberis(int num) {
