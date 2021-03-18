@@ -11,6 +11,7 @@ public class BrowseHistory {
 		urls.add(url);
 	}
 
+	@SuppressWarnings("unused")
 	private String pop() {
 		int size = urls.size() - 1;
 		String lastUrl = urls.get(size);
@@ -24,7 +25,6 @@ public class BrowseHistory {
 
 	public ListIterator createIterator() {
 		return new ListIterator(this);
-
 	}
 
 	public class ListIterator implements Iterator {
