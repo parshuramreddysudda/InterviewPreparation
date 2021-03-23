@@ -2,10 +2,6 @@ package assignment5;
 
 public class Main {
 
-	public Main() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public static void main(String[] args) {
 		String str = "Java is java again java again";
 		String st = "a";
