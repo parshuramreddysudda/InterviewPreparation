@@ -1,0 +1,1 @@
+select Salesman_id from salesman;

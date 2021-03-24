@@ -18,7 +18,7 @@ public class Calender {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "F://Selenium/chromedriver2.exe");
+		System.setProperty("webdriver.chrome.driver", "I://Selenium/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.spicejet.com/");
