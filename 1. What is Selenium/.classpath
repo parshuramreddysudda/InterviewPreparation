@@ -14,5 +14,20 @@
 	<classpathentry kind="lib" path="I:/Selenium/libs/guava-25.0-jre.jar"/>
 	<classpathentry kind="lib" path="I:/Selenium/libs/okhttp-3.11.0.jar"/>
 	<classpathentry kind="lib" path="I:/Selenium/libs/okio-1.14.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/poi-5.0.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/poi-examples-5.0.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/poi-excelant-5.0.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/poi-integration-5.0.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/poi-ooxml-5.0.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/poi-ooxml-full-5.0.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/poi-ooxml-lite-5.0.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/poi-scratchpad-5.0.0.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/lib/commons-codec-1.15.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/lib/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/lib/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/lib/SparseBitSet-1.2.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/ooxml-lib/commons-compress-1.20.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/ooxml-lib/curvesapi-1.06.jar"/>
+	<classpathentry kind="lib" path="I:/Selenium/poi-5.0.0/ooxml-lib/xmlbeans-4.0.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
