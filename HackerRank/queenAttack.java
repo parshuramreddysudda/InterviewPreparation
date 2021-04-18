@@ -83,7 +83,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Solution {
+public class queenAttack {
 
     // Complete the queensAttack function below.
     static int queensAttack(int n, int k, int r_q, int c_q, int[][] obstacles) {

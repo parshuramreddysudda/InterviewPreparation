@@ -1,4 +1,4 @@
-{
+
 //Initial Template for Java
 import java.util.*;
 import java.lang.*;
@@ -19,7 +19,7 @@ class GFG
     	     arr[i]=sc.nextInt();
     	     
     	     
-    	        Geeks obj=new Geeks();
+    	        Geeks12 obj=new Geeks12();
             	obj.xor1ToN(arr,n);
         	    obj.printArr(arr,n);
         	    obj.setToZero(arr,n);
@@ -30,10 +30,9 @@ class GFG
 }
 //Position this line where user code will be pasted.
 
-}
 /*This is a function problem.You only need to complete the function given below*/
 //User function Template for Java
-class Geeks{
+class Geeks12{
     
     static void printArr(int arr[],int n)
     {

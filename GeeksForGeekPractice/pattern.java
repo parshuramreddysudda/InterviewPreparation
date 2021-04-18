@@ -1,6 +1,7 @@
 /************************************************************************************
 
 You are given a string s of x and y. You need to verify whether the string follows the pattern xnyn. That is the string is valid only if equal number of ys follow equal number of xs.
+
 As an example: xxyyxxyy is valid. xy is valid. xxyyx is invalid. xxxyyyxxyyxy is valid.
 
 Input Format:
@@ -26,13 +27,11 @@ Output:
 0
 *************************************************************************************/
 
-
-{
 //Initial Template for Java
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-class GFG
+class sadasd
 {
     
 	public static void main (String[] args)
@@ -43,20 +42,18 @@ class GFG
     	 boolean flag = false;
     	 while(t-- > 0){
     	   String s=sc.next();
-    	   Geeks obj=new Geeks();
+    	   GeeksForGeeks obj=new GeeksForGeeks();
     	   obj.follPatt(s);
     	   
     	 }
     }
 }
 //Position this line where user code will be pasted.
-
-}
 /*This is a function problem.You only need to complete the function given below*/
 //User function Template for Java
-class Geeks{
+class GeeksForGeeks{
     
-    static void follPatt(String s)
+    void follPatt(String s)
     {
        
       System.out.println(iterative(0,s));

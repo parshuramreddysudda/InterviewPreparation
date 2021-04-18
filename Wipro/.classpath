@@ -5,6 +5,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre"/>
 	<classpathentry kind="src" path="Abstract Classes/src"/>
 	<classpathentry kind="src" path="Abstraction/src"/>
 	<classpathentry kind="src" path="ArrayList/src"/>

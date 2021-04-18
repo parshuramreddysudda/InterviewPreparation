@@ -33,7 +33,6 @@ Testcase 1: Area of rectangle with length 5 and breadth 6 is maximum, and is equ
 
 
 ******************************************************************************/
-{
 //Initial Template for Java
 import java.io.*;
 import java.util.*;
@@ -55,7 +54,7 @@ class Rectangle{
 }
 //Position this line where user code will be pasted.
 // Driver class with main function
-class GFG {
+class GeeksForGeek1 {
     
     // Driver code
 	public static void main (String[] args) {
@@ -81,7 +80,6 @@ class GFG {
 		    
 		}
 	}
-}
 }
 /*This is a function problem.You only need to complete the function given below*/
 //User function Template for Java

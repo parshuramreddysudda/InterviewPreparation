@@ -1,4 +1,4 @@
-import java.math.BigInteger;
+import java.math.*;
 import java.util.Scanner;
 
 public class Factorial {
@@ -17,7 +17,7 @@ public class Factorial {
 				// Calling function add to add two BigIntegers
 				MathematicalOperation obj = new MathematicalOperation();
 				for (int i = 2; i < n; i++) {
-	                  x=  obj.mul(x, BigInteger.valueOf(i));
+	                  x=  MathematicalOperation.mul(x, BigInteger.valueOf(i));
 	                  
 				}
 			}

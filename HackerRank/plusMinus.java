@@ -52,7 +52,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Solution {
+public class plusMinus {
 
     // Complete the plusMinus function below.
     static void plusMinus(int[] arr) {

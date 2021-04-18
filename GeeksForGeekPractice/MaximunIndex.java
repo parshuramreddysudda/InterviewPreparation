@@ -4,8 +4,6 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-import MaxSumIncreasing.FastReader;
-
 public class MaximunIndex {
 
 	public MaximunIndex() {
