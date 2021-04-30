@@ -1,13 +1,13 @@
-package com.springboot.basics.springboot;
+package practice.Practice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootApplication {
+public class PracticeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootApplication.class, args);
+		SpringApplication.run(PracticeApplication.class, args);
 	}
 
 }
