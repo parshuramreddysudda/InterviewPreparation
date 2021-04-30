@@ -23,7 +23,7 @@ public class StudentDatabase {
 
 	}
 
-	public static  void getStudent(int id) {
+	public static void getStudent(int id) {
 		if (students.get(id) == null)
 			System.out.println("No movie found");
 		for (StudentClass student : students) {

@@ -10,6 +10,8 @@ public class SpringDemo {
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		StudentDatabase stu = context.getBean(StudentDatabase.class);
 		stu.getDetails();
+		System.out.println("================================================");
+		stu.getStudent(3);
 	}
 
 }

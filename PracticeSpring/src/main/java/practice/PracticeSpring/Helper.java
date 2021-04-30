@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class Helper {
 
 //	 @Pointcut("execution()")
-	  @Pointcut("execution(* practice.PracticeSpring.*.*(..))")
+	  @Pointcut("execution(* StudentDatabase.*(..))")
 	   private void selectAll(){}
 
 	 
