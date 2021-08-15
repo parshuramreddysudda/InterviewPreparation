@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - kanban board with html, css and js</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link  href="./kanban.css">
+    <title>Kanban Board</title>
+</head>
+<body onload="getLocation()">
+    <div class="container">
+        <div class="kanban-heading">
+            <h3 class="kanban-heading-text">Astra Project – Kanban Board</h3>
+        </div><div class="kanban-heading">
+            <strong class="kanban-heading-text"  id="kanban-heading-location">Location Details</strong>
+        </div>
+        <div class="kanban-board">
+            <div class="kanban-block" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>TBacklog <id id="todoID"></id></strong>
+                <div class="task-button-block">
+                    <button id="task-button" onclick="createTask()">Create new task</span>
+                </div>
+                <div class="task" id="task1" draggable="true" ondragstart="drag(event)">
+                    <h5>To-do</h5>
+                    <span>Task 1</span>
+                    <hr>
+                    <h4>Author Blogs</h4>
+                </div>
+                <div class="task" id="task2" draggable="true" ondragstart="drag(event)">
+                    <h5>To-do</h5>
+                    <span>Task 2</span>
+                    <hr>
+                    <h4>Author Blogs</h4>
+                  
+                </div>
+                <div class="task" id="task3" draggable="true" ondragstart="drag(event)">
+                    <h5>To-do</h5>
+                    <span>Task 3</span>
+                    <hr>
+                    <h4>Author Blogs</h4>
+                   
+                </div>
+                <div class="task" id="task4" draggable="true" ondragstart="drag(event)">
+                    <h5>To-do</h5>
+                    <span>Task 4</span>
+                    <hr>
+                    <h4>Author Blogs</h4>
+                   
+                </div>
+                <div class="task" id="task5" draggable="true" ondragstart="drag(event)">
+                    <h5>To-do</h5>
+                    <span>Task 5</span>
+                    <hr>
+                    <h4>Author Blogs</h4>
+                   
+                </div>
+                <div class="task" id="task6" draggable="true" ondragstart="drag(event)">
+                    <h5>To-do</h5>
+                    <span>Task 1</span>
+                    <hr>
+                    <h4>Author Blogs</h4>
+                    <span>Task 6</span>
+                </div>
+            </div>
+            <div class="kanban-block" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>Selected for Dev <id id="inprogressID"></id></strong>
+            </div>
+            <div class="kanban-block" id="inprogress2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>In Progress <id id="inprogress2ID"></id></strong>
+            </div>
+            <div class="kanban-block" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <strong>Done <id id="doneID"></id></strong>
+            </div>
+            <div class="create-new-task-block" id="create-new-task-block">
+                <strong>New Task</strong>
+                <span class="form-row">
+                    <label class="form-row-label" for="task-name">Task</label>
+                    <input class="form-row-input" type="text" name="task-name" id="task-name">
+                </span>
+                <span class="form-row">
+                    <label class="form-row-label" for="task-name">Description</label>
+                    <textarea class="form-row-input" name="task-description" id="task-description" cols="70" rows="10"></textarea>
+                </span>
+                <span class="form-row">
+                    <label class="form-row-label" for="task-name">Status</label>
+                    <select class="form-row-input" name="task-status" id="task-status">
+                        <option value="todo">To Do</option>
+                        <option value="inprogress">In Progress</option>
+                        <option value="done">Done</option>
+                        
+                    </select>
+                </span>
+                
+                <span class="form-row-buttons">
+                    <button id="edit-button" onclick="editTask()">Edit</span>
+                    <button id="save-button" onclick="saveTask()">Save</span>
+                    <button id="cancel-button" onclick="createTask()">Cancel</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- partial -->
+<script>
+    
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  document.getElementById('kanban-heading-location').innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>

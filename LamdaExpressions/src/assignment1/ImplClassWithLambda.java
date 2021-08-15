@@ -1,5 +1,8 @@
 package assignment1;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class ImplClassWithLambda {
 
 	public static void main(String[] args) {
@@ -23,5 +26,25 @@ public class ImplClassWithLambda {
 		System.out.println(c + " occured " + result + " times.");
 
 	}
+	
 
 }
+
+//int count = 0;
+//
+//for (int i = 0; i < array.length; i++)
+//	if (array[i].getPrice() < price)
+//		count++;
+//
+//Allium[] sortedArray = new Allium[count];
+//
+//for (int i = 0; i < array.length; i++)
+//	if (array[i].getPrice() < price)
+//		sortedArray[i]=array[i];
+//
+//Arrays.sort(sortedArray, new Comparator<Allium>() {
+//	public int compare(Allium o1, Allium o2) {
+//		return o1.getPrice() - o2.getPrice();
+//	}
+//});
+//return sortedArray;

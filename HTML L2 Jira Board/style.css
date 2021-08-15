@@ -1,0 +1,153 @@
+body {
+  background-color: black;
+}
+
+.container {
+  width: 70%;
+  min-width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.kanban-board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+
+.kanban-heading-text {
+  font-size: 1.8rem;
+  background-color: tomato;
+  padding: 0.8rem 1.7rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.kanban-block strong{
+  background-color: beige;
+  padding: 2px;
+}
+
+.kanban-block,
+.create-new-task-block {
+  padding: 0.6rem;
+  width: 30.5%;
+  min-width: 14rem;
+  min-height: 4.5rem;
+  margin: 0.6rem;
+  border-radius: 0.3rem;
+}
+
+#todo {
+  background-color: gray;
+}
+
+#inprogress {
+  background-color: #ffaf00;
+  /* display: none; */
+}
+
+#inprogress2 {
+  background-color: pink;
+  /* display: none; */
+}
+
+#done {
+  background-color: #018b01;
+  /* display: none; */
+}
+
+.task {
+  background-color: white;
+  margin: 0.2rem 0rem 0.3rem 0rem;
+  border: 0.1rem solid black;
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.2rem 0.5rem 2rem;
+}
+.task h4{
+  color: lightgrey;
+}
+.task h5{
+  color: lightgrey;
+}
+#inprogress h5{
+color: yellow;
+}
+#done h5{
+  color: green;
+}
+#task-button {
+  margin: 0.2rem 0rem 0.1rem 0rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  width: 100%;
+  border: 0.25rem solid black;
+  padding: 0.5rem 2.7rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+.create-new-task-block {
+  display: none;
+  /* display: flex; */
+  background: #ffaf00;
+  width: 64.4%;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  margin: 0.2rem;
+}
+
+.form-row-label {
+  width: 15%;
+  padding: 0.2rem;
+  padding-right: 0.5rem;
+  border: 0.1rem solid black;
+  border-right: 0;
+  border-radius: 0.2rem 0rem 0rem 0.2rem;
+}
+
+.form-row-input {
+  border: 0.1rem solid black;
+  border-radius: 0rem 0.2rem 0.2rem 0rem;
+  width: 85%;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-row-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.2rem;
+}
+
+#edit-button,
+#save-button,
+#cancel-button {
+  margin: 0.2rem 0rem 0.1rem 0rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  width: 49.2%;
+  border: 0.25rem solid black;
+  padding: 0.5rem 2.7rem;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+#edit-button {
+  display: none;
+}
