@@ -1,4 +1,4 @@
-.topic2 span {
+p::first-letter {
+  font-size: 60px;
   color: red;
-  font-size: 40px;
 }
