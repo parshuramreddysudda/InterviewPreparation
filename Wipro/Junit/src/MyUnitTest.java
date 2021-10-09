@@ -18,4 +18,4 @@ public class MyUnitTest {
 		assertEquals("Result", "HelloWorld", myUnit.stringConcat("Hello", "World"));
 	}
 
-}
+} 
