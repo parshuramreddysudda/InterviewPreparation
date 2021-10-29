@@ -11,6 +11,7 @@ public class Arrays {
 		items = new int[count];
 	}
 
+
 	public int removeAt(int index) {
 		if (index > count)
 			return -1;
