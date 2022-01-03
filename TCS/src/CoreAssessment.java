@@ -1,12 +1,26 @@
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class CoreAssessment {
 
 	public static void main(String[] args) {
 
-		int value = 4;
-		int number1 = 401;
-		int number2 = 10;
+//		int value = 5;
+//		int number1 = 401;
+//		int number2 = 10;
+//		String str="asva";
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the option");
+		int value=sc.nextInt();
+		System.out.println("Enter the First number ");
+		int number1=sc.nextInt();
+		System.out.println("Enter the Second number ");
+		int number2=sc.nextInt();
+		System.out.println("Enter the text");
+		String str=sc.next();
+		
 
 		switch (value) {
 		case 1:
@@ -22,15 +36,29 @@ public class CoreAssessment {
 			numberToWord(number1);
 			break;
 		case 5:
-			genrateSeries(number1);
+			reverseString(str);
 			break;
 
 		case 6:
-			genrateSeries(number1);
 			break;
+			
 		default:
 			break;
 		}
+	}
+
+	private static void reverseString(String input) {
+
+		StringBuilder input1 = new StringBuilder();
+		 
+        input1.append(input);
+ 
+
+        input1.reverse();
+ 
+
+        System.out.println(input1);
+		
 	}
 
 	private static void numberToWord(int number) {
