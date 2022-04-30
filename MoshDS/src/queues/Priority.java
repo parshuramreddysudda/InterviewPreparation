@@ -18,6 +18,9 @@ public class Priority {
         pq.enqueue(6);
         out.println(pq.toString());
         pq.enqueue(3);
+        pq.dequeue();
+        out.println(pq.toString());
+        pq.enqueue(3);
         out.println(pq.toString());
 
     }

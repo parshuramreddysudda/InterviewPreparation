@@ -26,7 +26,6 @@ public class PriorityQueue {
             }
 //            out.println("Queue Position value is  " + queue[position] + " Postion is " + position + " Elemetn is  " + element);
             if (element < queue[position - 1]) {
-                out.println("Executed");
                 queue[position + 1] = queue[position];
             } else {
                 queue[position] = element;
@@ -36,6 +35,7 @@ public class PriorityQueue {
 
         }
         rear++;
+        count++;
 
 //            queue[rear] = element;
 //            rear = (rear + 1) % queue.length;
