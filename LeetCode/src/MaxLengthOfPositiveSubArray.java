@@ -2,10 +2,12 @@
 public class MaxLengthOfPositiveSubArray {
 
 	public MaxLengthOfPositiveSubArray() {
-		// TODO Auto-generated constructor stub
+
+
 	}
 
 	public static void main(String[] args) {
+
 
 		int[] nums = { 1,2,3,5,-6,4,0,10};
 		int positive = 0, negative = 0;
