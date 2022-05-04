@@ -3,17 +3,19 @@ package hashmap;
 import java.util.LinkedList;
 
 public class HashMap {
+    public class Entry {
+        public  int key;
+        public String value;
+
+        public Entry(int key, String value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
 
     LinkedList<Entry>[] array = new LinkedList[5];
     int size = array.length;
 
-    public HashMap() {
-
-        for (int i = 0; i < size; i++) {
-            LinkedList<Entry> list = new LinkedList<Entry>();
-            array[i] = list;
-        }
-    }
 
     private int getHashValue(int key) {
         return key % size;
@@ -26,8 +28,8 @@ public class HashMap {
         LinkedList<Entry> list = array[hash];
 
         for (Entry element : list) {
-            if (element.getKey() == key) {
-                return element.getValue();
+            if (element.key == key) {
+                return element.value;
 //                list.remove(element);
             }
         }
@@ -43,9 +45,9 @@ public class HashMap {
             array[index] = new LinkedList<>();
 
         LinkedList<Entry> bucket=array[index];
-        for( Entry entry:array[index]){
-            if(entry.getKey()==key){
-                entry.setValue(value);
+        for( Entry entry:bucket){
+            if(entry.key==key){
+                entry.value=value;
                 return;
             }
         }
@@ -58,10 +60,10 @@ public class HashMap {
     public void print() {
 
         for (int i = 0; i < size; i++) {
-//            ArrayList<Entry> list=array[i];
-//            System.out.println("List Size is"+list.size());
-            for (Entry element : array[i]) {
-                System.out.println("Key is" + element.getKey() + " Value is " + element.getValue());
+            LinkedList<Entry> bucket=array[i];
+            if(bucket!=null)
+            for (Entry element :bucket) {
+                System.out.println("Key is" + element.key + " Value is " + element.value);
             }
         }
     }
@@ -71,7 +73,7 @@ public class HashMap {
         LinkedList<Entry> list = array[hash];
 
         for (Entry element : list) {
-            if (element.getKey() == key) {
+            if (element.key == key) {
                 list.remove(element);
                 return true;
             }
