@@ -4,9 +4,19 @@ import java.util.Stack;
 
 public class RemoveallAdjacentDuplicatesinStringii {
 
-    class CharCounter {
+    static class CharCounter {
         char ch;
         int counter;
+
+        CharCounter(char ch) {
+            this.ch = ch;
+            this.counter = 1;
+        }
+
+        @Override
+        public String toString() {
+            return String.valueOf(ch);
+        }
     }
 
     public static void main(String[] args) {
@@ -15,31 +25,39 @@ public class RemoveallAdjacentDuplicatesinStringii {
     }
 
     public static String removeDuplicates(String s, int k) {
-        HashMap<Character, Integer> map = new HashMap<>();
-        Stack<Character> stack = new Stack<>();
-        stack.push(s.charAt(0));
 
-        for (int i = 1; i < s.length(); i++) {
+        if (s.length() == 1)
+            return s;
 
-            stack.push(s.charAt(i));
-            map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
-            System.out.println(" Stack Peek is "+stack.peek());
-            System.out.println("Stack print is");
-            PrintStack(stack);
-            while((!stack.isEmpty() )&& map.get(stack.peek()) == k) {
-                for (int j = 0; j < k; j++) {
+        Stack<CharCounter> stack = new Stack<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            if ((!stack.isEmpty()) && s.charAt(i) == stack.peek().ch) {
+                System.out.println(" Stack element is" + stack.peek().ch);
+                if (stack.peek().counter == k - 1) {
                     stack.pop();
+                } else {
+                    stack.peek().counter++;
                 }
-                System.out.println("Stack Peek is" + stack.peek());
+            } else {
+                stack.push(new CharCounter(s.charAt(i)));
             }
         }
-        System.out.println("Stack size is " + stack.size());
+        System.out.println("Stack size is" + stack.size());
+        StringBuilder result = new StringBuilder();
+        while (!stack.isEmpty()) {
+            while (stack.peek().counter > 0) {
+                result.append(stack.peek().toString());
+                stack.peek().counter--;
+            }
+            stack.pop();
+        }
 
-        return s;
+        return result.reverse().toString();
     }
 
-    public static void PrintStack(Stack<Character> s) {
-        Stack<Character> temp = new Stack<Character>();
+    public static void PrintStack(Stack<CharCounter> s) {
+        Stack<CharCounter> temp = new Stack<CharCounter>();
 
         while (s.empty() == false) {
             temp.push(s.peek());
@@ -47,12 +65,13 @@ public class RemoveallAdjacentDuplicatesinStringii {
         }
 
         while (temp.empty() == false) {
-            Character t = temp.peek();
+            Character t = temp.peek().ch;
             System.out.print(t + " ");
             temp.pop();
             // To restore contents of
             // the original stack.
-            s.push(t);
+            s.push(new CharCounter(t));
+            s.peek().counter = temp.peek().counter;
         }
     }
 
