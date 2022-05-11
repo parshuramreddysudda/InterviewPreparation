@@ -1,3 +1,5 @@
 /.metadata/
 .DS_Store
 LeetCode/LeetCode.iml
+*.xml
+*.iml

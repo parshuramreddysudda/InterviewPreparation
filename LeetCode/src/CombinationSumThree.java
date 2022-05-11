@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class CombinationSumThree {
     public static void main(String[] args) {
-        int k = 3, n = 9;
+        int k = 2, n = 5;
         System.out.println(combinationSum3(k, n));
     }
 
@@ -24,7 +24,7 @@ public class CombinationSumThree {
     public static void backTrackSolution(List<Integer> tempList, int k, int size, int targetSum, int start) {
 
 
-        if (targetSum == 0 && k == size) {
+        if ( k == size) {
             mainList.add(new ArrayList<>(tempList));
             return;
         } else if (k < size)
