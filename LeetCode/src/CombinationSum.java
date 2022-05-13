@@ -5,7 +5,7 @@ public class CombinationSum {
     public static void main(String[] args) {
         int k = 3, n = 9;
         int target = 7;
-        System.out.println(combinationSum(new int[]{2, 3, 6, 7}, target));
+        System.out.println(combinationSum(new int[]{1,2,3}, 3));
     }
 
     static List<List<Integer>> mainList = new ArrayList<List<Integer>>();
@@ -52,10 +52,9 @@ public class CombinationSum {
          * Without startIndex, if we use 0, we will get permutations,
          * i.e. repeat of same combinations but in different orders. Try it
          */
-        for (int i = startIndex; i < candidates.length; i++) {
+        for (int i = 0; i < candidates.length; i++) {
             subResult.add(candidates[i]);
-            int remainingTarget = target - candidates[i];
-            combinationSum(candidates, i, remainingTarget, subResult, result);
+            combinationSum(candidates, i, target-1, subResult, result);
             subResult.remove(subResult.size() - 1); // Backtrack, remove the last element added
         }
     }
