@@ -3,3 +3,5 @@
 LeetCode/LeetCode.iml
 *.xml
 *.iml
+*.class
+*.json
