@@ -4,8 +4,31 @@ import java.util.Arrays;
 
 public class MatrixRotate {
     public static void main(String[] args) {
-      rotate(new int[][]{{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}});
+        rotateInPlace(new int[][]{{0,1,2},{3,4,5},{6,7,8}});
     }
+    public  static void rotateInPlace(int[][] matrix){
+
+        int temp=0;
+        for (int i = 0; i <matrix.length ; i++) {
+            for (int j = i; j < matrix.length; j++) {
+//                System.out.println(" Matrix values are");
+                temp=matrix[i][j];
+                matrix[i][j]=matrix[j][i];
+                matrix[j][i]=temp;
+            }
+        }
+        System.out.println(Arrays.deepToString(matrix));
+        for (int i = 0,k=matrix.length-1; i <matrix.length/2 ; i++,k--) {
+            for (int j = 0; j < matrix.length; j++) {
+//                System.out.println("J and I  "+j+" "+i+" J and K is"+j+" "+k);
+                temp=matrix[j][i];
+                matrix[j][i]=matrix[j][k];
+                matrix[j][k]=temp;
+            }
+        }
+        System.out.println(Arrays.deepToString(matrix));
+    }
+
 
     public static void rotate(int[][] matrix) {
 
