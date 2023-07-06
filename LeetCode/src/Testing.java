@@ -1,60 +1,34 @@
-
-
-
 import java.util.*;
 
-public class Testing {
+class SlidingWindowMaximum {
+
 	public static void main(String[] args) {
-		List<Integer> answered = new ArrayList<Integer>();
-		answered.add(2);
-		answered.add(4);
-		List<Integer> needed = new ArrayList<Integer>();
-		needed.add(4);
-		needed.add(5);
-		int q = 1;
-		Integer[][] dp = new Integer[needed.size() + 1][needed.size() + 1];
-		System.out.println(maxSubjectsNumber2(dp, answered, needed, q, 0));
-
+		System.out.println(findMaxSlidingWindow(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},3));
 	}
+	public static int[] findMaxSlidingWindow(int[] nums, int w) {
+		Queue<Integer> queue=new PriorityQueue<Integer>(Collections.reverseOrder());
+		List<Integer> list=new ArrayList<Integer>();
 
-	@SuppressWarnings("unused")
-	private static int maxSubjectsNumber(List<Integer> answered, List<Integer> needed, int q, int index) {
-		if (q <= 0 || index >= answered.size())
-			return 0;
-
-		int sum1 = 0;
-		int sum2 = 0;
-
-		if (needed.get(index) - answered.get(index) <= q) {
-
-			sum1 += maxSubjectsNumber(answered, needed, q - (needed.get(index) - answered.get(index)), index + 1) + 1;
-		}
-		sum2 += maxSubjectsNumber(answered, needed, q, index + 1);
-
-		return Math.max(sum1, sum2);
-
-	}
-
-	private static int maxSubjectsNumber2(Integer[][] dp, List<Integer> answered, List<Integer> needed, int q,
-			int index) {
-
-		if (q <= 0 || index >= answered.size())
-			return 0;
-
-		int sum1 = 0;
-		int sum2 = 0;
-		if (dp[index][q] == null) {
-			if (needed.get(index) - answered.get(index) <= q) {
-
-				sum1 += maxSubjectsNumber2(dp, answered, needed, q - (needed.get(index) - answered.get(index)),
-						index + 1) + 1;
-			}
-			sum2 += maxSubjectsNumber2(dp, answered, needed, q, index + 1);
-			dp[index][q] = Math.max(sum1, sum2);
+		if(w>=nums.length){
+			Arrays.sort(nums);
+			return new int[]{nums[nums.length-1]};
 		}
 
-		return dp[index][q];
+		for(int i=0;i<w;i++)
+			queue.offer(nums[i]);
+		list.add(queue.peek());
 
+		for(int i=w;i<nums.length-w-1;i++){
+			System.out.println("Array is ");
+			System.out.println("Array is "+nums[i-w]);
+			queue.remove(nums[i-w]);
+			queue.add(nums[i]);
+			list.add(queue.peek());
+		}
+		// int[] array = new int[list.size()];
+		// list.toArray(array);
+		int[] array = new int[list.size()];
+		for(int i = 0; i < list.size(); i++) array[i] = list.get(i);
+		return array;
 	}
-
 }
