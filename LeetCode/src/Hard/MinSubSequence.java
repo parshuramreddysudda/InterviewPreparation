@@ -7,30 +7,30 @@ import java.util.*;
 public class MinSubSequence {
     public static void main(String[] args) {
 
-        System.out.println(minSubArrayLen(7,new int[]{2,3,1,2,4,3}));
+        System.out.println(lengthOfLongestSubstring("aaaaabbbababababababvaavfa"));
     }
 
-    public static int minSubArrayLen(int target, int[] nums) {
-
-        int size=Integer.MAX_VALUE;
-        int min=Integer.MAX_VALUE;
-        int index=0;
-        int sum=0;
+    public static int lengthOfLongestSubstring(String s) {
+        int[] arr=new int[200];
+        Arrays.fill(arr,-1);
+        int max=0;
         int start=0;
-        while(index<nums.length){
-            sum+=nums[index];
-            if(sum>=target){
-                min=Math.min(min,(index-start)+1);
-                while(sum>=target){
-                    min=Math.min(min,index-start);
-                    sum-=nums[start++];
-                }
-
+        for(int i=0;i<s.length();i++){
+            int index=s.charAt(i);
+            if(arr[index]>-1){
+                max=Math.max(max,i-start);
+                if(start<=arr[index])
+                    start=arr[index]+1;
+                arr[index]=i;
+            }else{
+                arr[index]=i;
             }
-            index++;
         }
+        if(start==0)
+            return s.length();
 
-        return min;
+        max=Math.max(max,s.length()-start);
+        return max;
     }
 
     public static int countGoodSubstrings(String s) {

@@ -7,21 +7,20 @@ public class BestTimeToSell2 {
     }
 //    expected to be 2
 
-    public static int maxProfit(int[] nums) {
-        int min = nums[0], totalProfit = 0;
-        int pos = 1, max = -1;
-        while (pos < nums.length) {
-            if (nums[pos] < min)
-                min = nums[pos];
-            while (pos < nums.length && max < nums[pos])
-                max = nums[pos++];
+    public static int maxProfit(int[] prices) {
+        int min=prices[0];
+        int max=-1;
+        int totalProfit=0;
+        for(int i=0;i<prices.length;){
 
+            min=Math.min(prices[i],min);
+            while(i<prices.length&&max<prices[i]){
+                max=prices[i++];
+            }
             totalProfit+=max-min;
-            max = -1;
-            if (pos<nums.length) min = nums[pos];
-            pos++;
+            max=-1;
+            if(i<prices.length) min=prices[i];
         }
-
         return totalProfit;
     }
 }
