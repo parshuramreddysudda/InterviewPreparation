@@ -19,7 +19,7 @@ def first_bad_version(n):
 
     while low < high:
         mid = low + (high - low) // 2
-        if is_bad_version(mid)
+        if is_bad_version(mid):
             high = mid
         else:
             low = mid
