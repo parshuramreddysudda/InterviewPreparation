@@ -7,12 +7,13 @@ def binary_search_rotated(nums, target):
         if nums[mid] == target:
             return mid
         elif nums[left] >= target:
-            if nums[left] > nums[mid] && :
+            if nums[left] > nums[mid]:
                 right = mid - 1
             else:
                 left = mid + 1
         else:
-            if target <nums[left] < nums[mid]
+            if target <nums[left] < nums[mid] and target > nums[mid]:
+                right = mid -1
     return -1
 
 
