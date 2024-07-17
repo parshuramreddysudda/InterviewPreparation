@@ -6,14 +6,13 @@ def binary_search_rotated(nums, target):
         mid = left + (right - left) // 2
         if nums[mid] == target:
             return mid
-        elif nums[left] >= target:
-            if nums[left] > nums[mid]:
-                right = mid - 1
-            else:
+        elif nums[mid] <= nums[right]:
+            if nums[mid] <= target <= nums[right]:
                 left = mid + 1
-        else:
-            if target <nums[left] < nums[mid] and target > nums[mid]:
-                right = mid -1
+            else:
+                right = mid - 1
+        # else:
+
     return -1
 
 
