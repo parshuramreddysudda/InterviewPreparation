@@ -38,7 +38,6 @@ class Solution:
         else:
             return num1
 
-        # Test cases
 
 
 if __name__ == "__main__":
