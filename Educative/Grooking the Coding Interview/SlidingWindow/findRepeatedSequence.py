@@ -10,7 +10,7 @@ def find_repeated_sequences(s: str, k: int) -> list:
     return res
 
 
-# Test cases 
+# Test cases
 if __name__ == "__main__":
     # Test case 1: Repeated DNA sequences
     s1 = "CGG"
