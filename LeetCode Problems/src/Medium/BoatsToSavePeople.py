@@ -14,7 +14,7 @@ def numRescueBoats(people: list[int], limit: int) -> int:
         end -= 1
     return boats
 
- 
+
 # Test cases
 if __name__ == "__main__":
     # Test case 1: General case
