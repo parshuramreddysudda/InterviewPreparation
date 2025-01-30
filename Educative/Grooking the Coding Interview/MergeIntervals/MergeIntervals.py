@@ -1,17 +1,26 @@
 from typing import List
 
+
 def merge_intervals(intervals: List[List[int]]) -> List[List[int]]:
     """
     Merges overlapping intervals in a given list of intervals.
     :param intervals: A list of intervals where each interval is represented as [start, end].
     :return: A list of merged intervals in ascending order of their start times.
     """
+    pointer = 0
+    for i in range(0, len(intervals) - 1):
+        print(intervals[i][1])
+        if intervals[pointer][1] > intervals[i + 1][0]:
+            intervals[pointer][1] = max(intervals[pointer][1], intervals[i + 1][0])
+            intervals[pointer][1] = max(intervals[pointer][1], intervals[i + 1][1])
+        else:
+            pointer += 1
+            intervals[pointer][0], intervals[pointer][1] = intervals[i+1][0], intervals[i+1][1]
 
-    for i in range(1,len(intervals)):
-        if intervals[i][0]
+    # for interval in intervals:
+    # print(interval)
+    return intervals[:pointer+1]
 
-
-    return []
 
 # Test cases
 if __name__ == "__main__":
