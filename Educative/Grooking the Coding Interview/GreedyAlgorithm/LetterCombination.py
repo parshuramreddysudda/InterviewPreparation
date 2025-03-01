@@ -1,55 +1,47 @@
-from itertools import count
+# Use backtrack function to generate all possible combinations
+def backtrack(index, path, digits, letters, combinations):
+    if len(path) == len(digits):
+        combinations.append(''.join(path))
+        return
+    possible_letters = letters[digits[index]]
+    if possible_letters:
+        for letter in possible_letters:
+            path.append(letter)
+            backtrack(index + 1, path, digits, letters, combinations)
+            path.pop()
 
 
 def letter_combinations(digits):
-    """
-    Generates all possible letter combinations based on digit input.
-
-    :param digits: Input string containing digits (2-9)
-    :return: List of all letter combinations
-    """
-    # Replace this placeholder return statement with your code
+    combinations = []
 
     if len(digits) == 0:
         return []
-    if len(digits) == 1:
-        return [digits]
-    dig_arr = {
-        '2': ['a', 'b', 'c'],
-        '3': ['d', 'e', 'f'],
-        '4': ['g', 'h', 'i'],
-        '5': ['j', 'k', 'l'],
-        '6': ['m', 'n', 'o'],
-        '7': ['p', 'q', 'r', 's'],
-        '8': ['t', 'u', 'v'],
-        '9': ['w', 'x', 'y', 'z']
-    }
 
-    combinations = dig_arr[(digits[-1])]
-    for i in range(len(digits) - 2, -1, -1):
-        combinations = AttachStrings(digits[i], combinations, dig_arr)
+    digits_mapping = {
+        "1": [""],
+        "2": ["a", "b", "c"],
+        "3": ["d", "e", "f"],
+        "4": ["g", "h", "i"],
+        "5": ["j", "k", "l"],
+        "6": ["m", "n", "o"],
+        "7": ["p", "q", "r", "s"],
+        "8": ["t", "u", "v"],
+        "9": ["w", "x", "y", "z"]}
 
+    backtrack(0, [], digits, digits_mapping, combinations)
     return combinations
 
 
-def AttachStrings(letter, combinations, dig_arr):
-    new_combinations = []
-    for i in range(len(dig_arr[letter])):
-        for j in range(len(combinations)):
-            new_combinations.append(dig_arr[letter][i] + combinations[j])
-    return new_combinations
+# driver code
+def main():
+    digits_array = ["23", "73", "426", "78", "925", "2345"]
+    counter = 1
+    for digits in digits_array:
+        print(counter, ".\t All letter combinations for '",
+              digits, "': ", letter_combinations(digits), sep="")
+        counter += 1
+        print("-" * 100)
 
 
-# Test Cases
 if __name__ == "__main__":
-    test_cases = [
-        ("23", ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]),
-        ("", []),  # Empty input
-        ("2", ["a", "b", "c"]),  # Single digit
-        ("92", ["wa", "wb", "wc", "xa", "xb", "xc", "ya", "yb", "yc", "za", "zb", "zc"]),
-        ("79", ["pw", "px", "py", "pz", "qw", "qx", "qy", "qz", "rw", "rx", "ry", "rz", "sw", "sx", "sy", "sz"])
-    ]
-
-    for digits, expected in test_cases:
-        result = letter_combinations(digits)
-        print(f"Input: {digits} -> Combinations: {result} (Expected: {expected})")
+    main()
