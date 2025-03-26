@@ -9,30 +9,43 @@ class TreeNode:
 # Function to find all root-to-leaf paths in a binary tree
 def binary_tree_paths(root):
     # Implement your solution here
-    return binaryTreeParse(root)
+    def backtrack(node, path):
+        if node:
+            path += str(node.val)
+
+            if not node.left and not node.right:
+                paths.append(path)
+            else:
+                path += '->'
+                backtrack(node.left,path)
+                backtrack(node.right,path)
+    paths =[]
+    backtrack(root,'')
+    return paths
+
 
 
 def binaryTreeParse(root):
     if not root:
-        return None
+        return []
     if root.left is None and root.right is None:
-        return str(root.val)
+        return [str(root.val)]
 
     paths = []
     left = binaryTreeParse(root.left)
     right = binaryTreeParse(root.right)
 
     if left is not None:
-        paths.insert(0, left)
+        paths += left
     if right is not None:
-        paths.insert(0, right)
+        paths += right
 
     # Left side tree Path
 
     # Right side tree Path
 
-    for path in paths:
-        path[0].join(str(root.val) + "->" + path[0])
+    for i in range(len(paths)):
+        paths[i] = str(root.val) + "->" + paths[i]
 
     return paths
 
@@ -41,6 +54,15 @@ def binaryTreeParse(root):
 def test_binary_tree_paths():
     # Example test cases
     # Test case 1: Tree with multiple paths
+    tree6 = TreeNode(1)
+    tree6.left = TreeNode(2)
+    tree6.right = TreeNode(3)
+    tree6.left.left = TreeNode(4)
+    tree6.left.right = TreeNode(5)
+    tree6.right.left = TreeNode(6)
+    tree6.right.right = TreeNode(7)
+    expected_output6 = ["1->2->4", "1->2->5", "1->3->6", "1->3->7"]
+
     tree1 = TreeNode(1)
     tree1.left = TreeNode(2)
     tree1.right = TreeNode(3)
@@ -56,6 +78,7 @@ def test_binary_tree_paths():
     expected_output3 = []
 
     test_cases = [
+        (tree6, expected_output6),
         (tree1, expected_output1),
         (tree2, expected_output2),
         (tree3, expected_output3)
