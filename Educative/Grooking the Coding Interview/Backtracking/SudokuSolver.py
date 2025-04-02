@@ -4,6 +4,7 @@ from typing import List
 # Function to solve a Sudoku puzzle
 def solve_sudoku(board: List[List[str]]) -> None:
     # Implement your solution here
+
     pass
 
 
