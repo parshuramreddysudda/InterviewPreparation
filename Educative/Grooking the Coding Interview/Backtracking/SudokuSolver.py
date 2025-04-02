@@ -5,8 +5,20 @@ from typing import List
 def solve_sudoku(board: List[List[str]]) -> None:
     # Implement your solution here
 
+    for i in range(0,len(board),3):
+        for j in range(0,len(board),3):
+            print("I value is ",i,"x",j,". ",board[i][j])
+
     pass
 
+def checkSoduku(board,starti, startj,boardLength) -> None:
+
+    end = start +2
+
+    for i in range(boardLength):
+
+
+    return
 
 # Test cases
 def test_solve_sudoku():
