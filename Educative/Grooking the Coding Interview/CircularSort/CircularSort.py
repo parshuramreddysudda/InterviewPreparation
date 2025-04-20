@@ -8,7 +8,7 @@ def cyclic_sort(nums: List[int]) -> List[int]:
     i = 0
     while i < len(nums):
         if nums[i] - 1 != i:
-            newIndex = nums[i] -1
+            newIndex = nums[i] - 1
             nums[i], nums[newIndex] = nums[newIndex], nums[i]
         else:
             i += 1
