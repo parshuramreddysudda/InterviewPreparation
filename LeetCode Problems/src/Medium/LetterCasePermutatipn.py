@@ -1,3 +1,4 @@
+import string
 from typing import List
 
 
@@ -11,21 +12,14 @@ class Solution:
                 results.append(res[:])
                 return
 
-            for index in range(index, len(s)):
-
-                if s[index].isalpha():
-                    # With Normal String
-                    res += s[index]
-                    letterCasePermutation(s, index + 1, strList, res)
-
-                    res = res[:-1]
-                    res += s[index].capitalize()
-                    letterCasePermutation(s, index + 1, strList, res)
-                else:
-                    res += s[index]
-                    if index+1 == len(s):
-                        results.append(res[:])
-                        return
+            if s[index].isnumeric():
+                res += (s[index])
+            else:
+                res += s[index].capitalize()
+                letterCasePermutation(s, index + 1, strList, res)
+                res = res[:-1]
+                res += s[index].lower()
+            letterCasePermutation(s, index + 1, strList, res)
 
         letterCasePermutation(s, 0, list(s), "")
 
