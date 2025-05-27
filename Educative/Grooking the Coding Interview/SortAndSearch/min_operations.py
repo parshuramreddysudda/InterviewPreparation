@@ -3,7 +3,7 @@ from typing import List
 # Function to calculate minimum total operations to make all elements equal to each query
 def min_operations(nums: List[int], queries: List[int]) -> List[int]:
     # Implement your solution here
-    
+
     pass
 
 # Test cases
