@@ -1,10 +1,26 @@
 from typing import List
 
+
 # Function to count number of valid triangles
 def triangle_number(nums: List[int]) -> int:
+    ans = 0
+    nums.sort()
     # Implement your solution here
 
-    pass
+    # 3 5 7 9 11
+    # 3 + 5 > 7 Valid
+    # l = 5,  r = 11
+    for k in range(len(nums)-1,1,-1):
+        i = 0
+        j = k-1
+        while i < j:
+            if nums[i]+nums[j] > nums[k]:
+                ans += j - i
+                j -= 1
+            else:
+                i += 1
+    return ans
+
 
 # Test cases
 def test_triangle_number():
@@ -13,7 +29,7 @@ def test_triangle_number():
         assert result == expected_output, f"Failed for nums={input_nums}: expected {expected_output}, got {result}"
 
     # Test case 1: Basic valid triangles
-    validate([2, 2, 3, 4], 3)
+    validate([3,5,7,9,12], 5)
 
     # Test case 2: No valid triangles
     validate([1, 1, 1, 3], 1)
@@ -34,6 +50,7 @@ def test_triangle_number():
     validate([1, 2, 3, 4, 5], 3)
 
     print("All test cases passed!")
+
 
 # Run tests
 if __name__ == "__main__":
