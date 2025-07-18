@@ -3,7 +3,7 @@ class Solution:
         # Implement your solution here
         if len(str1) < len(str2):
             return False
-        
+
 
         pass
 
