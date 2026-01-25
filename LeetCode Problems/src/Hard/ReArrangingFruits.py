@@ -8,6 +8,7 @@ class Solution:
         Return the minimal cost or -1 if impossible.
         """
         # TODO: Implement your logic here
+
         return 0
 
 # ------------------ Test Harness ------------------
