@@ -1,47 +1,90 @@
 from typing import List
 
+
 class Solution:
-    def nextPermutation(self, nums: List[int]) -> None:
-        print(nums)
+    def nextPermutation(self, nums: List[int]) -> list[int]:
+        # Write your code here
+        n = len(nums)
+        left = len(nums) - 1
+        pivot = len(nums) - 1
+        index = 0
+        while pivot >0 and nums[pivot] < nums[pivot-1]:
+                pivot -= 1
+
+        if pivot <= 0:
+            nums.reverse()
+            return nums
+
+        index = pivot
+        minElem = index
+        while index < n:
+            if nums[minElem] >= nums[index] > nums[pivot - 1]:
+                minElem = index
+            index += 1
+
+        nums[pivot-1], nums[minElem] = nums[minElem], nums[pivot-1]
+
+        def swap(i, j):
+            temp = nums[i]
+            nums[i] = nums[j]
+            nums[j] = temp
+
+        def reverse(start):
+            i, j = start, len(nums) - 1
+            while i < j:
+                swap(i, j)
+                i += 1
+                j -= 1
+
+        reverse(pivot)
+        return nums
 
 
+def test_nextPermutation():
+    sol = Solution()
 
-# Test cases
-def test_next_permutation():
-    s = Solution()
+    def validate(nums, expected):
+        original = nums[:]
+        sol.nextPermutation(nums)
+        assert nums == expected, (
+            f"❌ Failed for input={original}. "
+            f"Expected {expected}, got {nums}"
+        )
 
-    # Test case 1: Increasing sequence
-    nums1 = [1, 2, 3]
-    expected1 = [1, 3, 2]
-    s.nextPermutation(nums1)
-    assert nums1 == expected1, f"Test case 1 failed: expected {expected1}, got {nums1}"
+    # 🔬 Core test cases
+    # validate([4,1,5,2],[4,2,1,5])
+    # validate([1,2,3], [1,3,2])
+    # validate([1,3,2], [2,1,3])
+    # validate([2,3,1], [3,1,2])
+    #
+    # # 🔬 Descending case (max permutation)
+    # validate([3,2,1], [1,2,3])
+    #
+    # # 🔬 Edge cases
+    # validate([1], [1])
+    # validate([1,1], [1,1])
+    # validate([2,1], [1,2])
+    #
+    # # 🔬 Duplicates
+    # validate([1,1,5], [1,5,1])
+    validate([1,5,1], [5,1,1])
+    validate([2,2,3,3], [2,3,2,3])
+    validate([1,2,2], [2,1,2])
 
-    # Test case 2: Last permutation
-    nums2 = [3, 2, 1]
-    expected2 = [1, 2, 3]
-    s.nextPermutation(nums2)
-    assert nums2 == expected2, f"Test case 2 failed: expected {expected2}, got {nums2}"
+    # 🔬 Corner / tricky cases
+    validate([1,4,3,2], [2,1,3,4])
+    validate([1,5,8,4,7,6,5,3,1], [1,5,8,5,1,3,4,6,7])
+    validate([5,4,7,5,3,2], [5,5,2,3,4,7])
+    validate([1,3,2,4], [1,3,4,2])
 
-    # Test case 3: Middle case
-    nums3 = [1, 1, 5]
-    expected3 = [1, 5, 1]
-    s.nextPermutation(nums3)
-    assert nums3 == expected3, f"Test case 3 failed: expected {expected3}, got {nums3}"
+    # 🔬 Large input case
+    large_nums = list(range(1, 1001))
+    expected_large = list(range(1, 999)) + [1000, 999]
+    validate(large_nums, expected_large)
 
-    # Test case 4: Single element
-    nums4 = [1]
-    expected4 = [1]
-    s.nextPermutation(nums4)
-    assert nums4 == expected4, f"Test case 4 failed: expected {expected4}, got {nums4}"
+    print("✅ All test cases passed!")
 
-    # Test case 5: Duplicates
-    nums5 = [2, 2, 0, 1]
-    expected5 = [2, 2, 1, 0]
-    s.nextPermutation(nums5)
-    assert nums5 == expected5, f"Test case 5 failed: expected {expected5}, got {nums5}"
 
-    print("All test cases passed!")
-
-# Run the test cases
+# Run tests
 if __name__ == "__main__":
-    test_next_permutation()
+    test_nextPermutation()
