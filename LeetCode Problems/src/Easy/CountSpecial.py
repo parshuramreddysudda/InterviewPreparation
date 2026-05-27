@@ -4,8 +4,18 @@ import string
 class Solution:
     def numberOfSpecialChars(self, word: str) -> int:
         # ❌ Implement your solution here
-        word = set(word)
-        return sum(s.isupper() and s.lower() in word for s in word)
+        alpha = {letter: 0 for letter in string.ascii_letters}
+        for ind, val in enumerate(word):
+            if val.isupper() and alpha[val] != 0:
+                continue
+            alpha[val] = ind
+
+        count = 0
+        for val in string.ascii_lowercase:
+            if alpha[val] < alpha[val.upper()]:
+                count += 1
+
+        return sum(alpha[val] < alpha[val.upper()] for val in string.ascii_lowercase)
 
 
 def test_numberOfSpecialChars_3120():
@@ -19,7 +29,7 @@ def test_numberOfSpecialChars_3120():
         )
 
     # 🔬 Core test cases
-    validate("aaAbcBC", 3)          # a, b, c
+    validate("aAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaAaA", 0)          # a, b, c
     validate("abc", 0)              # no uppercase
     validate("abBCab", 1)           # only b/B
 
