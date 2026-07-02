@@ -4,18 +4,8 @@ import string
 class Solution:
     def numberOfSpecialChars(self, word: str) -> int:
         # ❌ Implement your solution here
-        alpha = {letter: 0 for letter in string.ascii_letters}
-        for ind, val in enumerate(word):
-            if val.isupper() and alpha[val] != 0:
-                continue
-            alpha[val] = ind
 
-        count = 0
-        for val in string.ascii_lowercase:
-            if alpha[val] < alpha[val.upper()]:
-                count += 1
 
-        return sum(alpha[val] < alpha[val.upper()] for val in string.ascii_lowercase)
 
 
 def test_numberOfSpecialChars_3120():
